@@ -141,8 +141,8 @@ describe Bibliografia::APABibliografia do
 
 	describe "Almacenamos datos del primer autor:" do
 		before :each do
-		 @b1=Bibliografia::APABibliografia.new(tipo:"Libro",nombres:["Nombre1","Nombre2","Nombre3"],apellidos: ["Apellido1","Apellido2","Apellido3"], titulo: "Titulo",fecha:"Fecha",lugar: "Lugar1", isbn: "ISBN")
-		 @b2=Bibliografia::APABibliografia.new(tipo:"Articulo",nombres:["Nombre"],apellidos: ["Apellido"], titulo: "Titulo",fecha:"Fecha",lugar: "Lugar2", isbn: "ISBN")
+		 @b1=Bibliografia::APABibliografia.new(tipo:"Libro",nombres:["Nombre1","Nombre2","Nombre3"],apellidos: ["Apellido1","Apellido2","Apellido3"], titulo: "Titulo",lugar: "Lugar1")
+		 @b2=Bibliografia::APABibliografia.new(tipo:"Articulo",nombres:["Nombre"],apellidos: ["Apellido"], titulo: "Titulo",lugar: "Lugar2")
 		end
 	
 		it"La referencia contiene los nombres de los autores" do

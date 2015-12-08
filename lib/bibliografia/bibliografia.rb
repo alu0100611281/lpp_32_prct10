@@ -198,16 +198,16 @@ class Lista
 	class APABibliografia < Bibliografia
 		attr_accessor :nombres, :apellidos, :tipo, :lugar
 		
-		def initialize(nombres,apellidos,tipo,lugar)
-			@nombre =nombres
+		def initialize(args)
+			@nombres =args[:nombres]
 			raise ArgumentError, 'Specify :nombres' unless @nombres
-			@apellidos=apellidos
-			raise ArgumentError, 'Specify :apellidos' unless @apeliidos
-			@tipo=tipo
+			@apellidos=args[:apellidos]
+			raise ArgumentError, 'Specify :apellidos' unless @apellidos
+			@tipo=args[:tipo]
 			raise ArgumentError, 'Specify :tipo' unless @tipo
-			@lugar=lugar
+			@lugar=args[:lugar]
 			raise ArgumentError, 'Specify :lugar' unless @lugar
-			super(nombres,apellidos,tipo,lugar)
+			
 		end
 		
 	end#end de la clase APABibliografia
